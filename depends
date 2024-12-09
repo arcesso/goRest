@@ -1,2 +1,0 @@
-go install gorm.io/gorm@latest
-go get github.com/gofiber/fiber/v2
