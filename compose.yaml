@@ -1,0 +1,19 @@
+# docker-compose.yaml
+services:
+  goRest:
+    container_name: goRest
+    image: gorest/gorest:dev
+    build:
+      context: .
+      target: dev
+    volumes:
+      - .:/app
+    ports:
+      - "5000:5000"
+      - "2345:2345"
+    networks:
+      - goRest-network
+
+networks:
+  goRest-network:
+    name: goRest-network
